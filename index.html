@@ -3,116 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Moh Iqbal Triwijaya</title>
+    <title>Portofolio Iqbal</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo"><a href="#">Iqbal.</a></div>
-        <ul class="nav-links">
+        <div class="logo"><a href="#home">Iqbal.</a></div>
+        <ul class="menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <button id="darkToggle"><i class='bx bx-moon'></i></button>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="home fade-in">
-        <img src="1696839530280.png" alt="Profile" class="profile-img">
-        <div class="home-text">
-            <p>"Halo, nama saya Moh Iqbal Triwijaya. Saya tinggal di Sumenep dan saat ini sedang mengejar gelar di Politeknik Elektronika Negeri Surabaya dengan jurusan Teknik Informatika. Di luar kuliah, saya memiliki minat yang kuat dalam pengembangan aplikasi dan pemrograman."</p>
+    <!-- Home -->
+    <section id="home" class="hero">
+        <img src="1696839530280.png" alt="Foto Iqbal" class="profile-img">
+        <div class="hero-text">
+            <h1>Halo, Saya <span>Moh Iqbal Triwijaya</span></h1>
+            <p>Saya seorang mahasiswa Teknik Informatika di Politeknik Elektronika Negeri Surabaya.  
+               Saya percaya bahwa teknologi bukan hanya alat, tapi juga seni yang dapat mengubah cara kita hidup.  
+               Di luar kuliah, saya gemar membangun aplikasi dan mempelajari teknologi terbaru.</p>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about fade-in">
-        <h1 class="section-title">Tentang Saya</h1>
-        <div class="about-content">
-            <img src="me.JPG" alt="About Me" class="about-img">
-            <p>"Iqbal, alumni SMAN 2 Sumenep, memiliki tinggi 170 cm dan berat 70 kg. Ia telah meraih prestasi besar, juara pertama Olimpiade Nasional dan juara kedua Olimpiade tingkat nasional. Ingat, merawat diri dimulai dari rasa suka terhadap diri sendiri, menghargai diri, dan memiliki pandangan positif."</p>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio fade-in">
-        <h1 class="section-title">Portfolio</h1>
-        <div class="gallery">
-            <img src="gambar4.jpeg" alt="Gambar 1">
-            <img src="gambar5.jpeg" alt="Gambar 2">
-            <img src="gambar3.jpeg" alt="Gambar 3">
-            <img src="gambar.jpeg" alt="Gambar 4">
-            <img src="gambar2.jpeg" alt="Gambar 5">
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills fade-in">
-        <h1 class="section-title">Skill / Kemampuan</h1>
-        <div class="skill-bar">
-            <p>HTML</p>
-            <div class="bar"><span class="html"></span></div>
-        </div>
-        <div class="skill-bar">
-            <p>CSS</p>
-            <div class="bar"><span class="css"></span></div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact fade-in">
-        <h1 class="section-title">Kontak</h1>
-        <div class="contact-container">
-            <div class="socials">
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-                <a href="#"><i class='bx bxl-twitter'></i></a>
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Tentang Saya</h2>
+            <div class="about-content">
+                <img src="me.JPG" alt="Foto Iqbal" class="about-img">
+                <p>Perjalanan saya dimulai di SMAN 2 Sumenep, di mana saya menemukan passion di dunia teknologi.  
+                   Tinggi 170 cm, berat 70 kg, dan tekad yang lebih berat lagi 😄.  
+                   Beberapa pencapaian saya antara lain juara 1 Olimpiade Nasional dan juara 2 tingkat nasional.  
+                   Bagi saya, keberhasilan dimulai dari menghargai diri sendiri dan terus berkembang setiap hari.</p>
             </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Nama" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Pesan" required></textarea>
-                <button type="submit">Kirim</button>
-            </form>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <img src="gambar4.jpeg" alt="Project 1">
+                <img src="gambar5.jpeg" alt="Project 2">
+                <img src="gambar3.jpeg" alt="Project 3">
+                <img src="gambar.jpeg" alt="Project 4">
+                <img src="gambar2.jpeg" alt="Project 5">
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skill / Kemampuan</h2>
+            <div class="skill-bar">
+                <p>HTML</p>
+                <div class="bar"><span style="width: 90%;"></span></div>
+                <p>CSS</p>
+                <div class="bar"><span style="width: 80%;"></span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Kontak</h2>
+            <div class="contact-grid">
+                <div class="social">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                </div>
+                <form>
+                    <input type="text" placeholder="Nama">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Pesan"></textarea>
+                    <button type="submit">Kirim</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>© 2025 Moh Iqbal Triwijaya | All Rights Reserved</p>
+        <p>&copy; 2025 Iqbal. Semua hak dilindungi.</p>
     </footer>
 
     <script>
-        // Animation on scroll
-        const faders = document.querySelectorAll('.fade-in');
-        const options = { threshold: 0.3 };
-
-        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add('appear');
-                observer.unobserve(entry.target);
-            });
-        }, options);
-
-        faders.forEach(fader => appearOnScroll.observe(fader));
-
-        // Skill bar animation
-        window.addEventListener('scroll', () => {
-            const skills = document.querySelector('.skills');
-            const skillBars = document.querySelectorAll('.bar span');
-            const skillsTop = skills.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            
-            if (skillsTop < windowHeight - 50) {
-                skillBars.forEach(bar => bar.classList.add('fill'));
-            }
+        const toggle = document.getElementById('darkToggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
         });
     </script>
 </body>
 </html>
-
-
