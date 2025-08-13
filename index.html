@@ -1,106 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Iqbal</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio | Moh Iqbal Triwijaya</title>
+
+  <!-- Font & Icon -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- PWA-ish color -->
+  <meta name="theme-color" content="#0B5ED7" id="meta-theme-color">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo"><a href="#home">Iqbal.</a></div>
-        <ul class="menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button id="darkToggle"><i class='bx bx-moon'></i></button>
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <a class="brand" href="#home">Iqbal1<span>.</span></a>
+
+    <nav class="nav" aria-label="Primary">
+      <button class="nav__toggle" aria-expanded="false" aria-label="Buka menu">
+        <i class="bx bx-menu"></i>
+      </button>
+      <ul class="nav__links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#portfolio">Portofolio</a></li>
+        <li><a href="#skills">Skill</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
     </nav>
 
-    <!-- Home -->
-    <section id="home" class="hero">
-        <img src="1696839530280.png" alt="Foto Iqbal" class="profile-img">
-        <div class="hero-text">
-            <h1>Halo, Saya <span>Moh Iqbal Triwijaya</span></h1>
-            <p>Saya seorang mahasiswa Teknik Informatika di Politeknik Elektronika Negeri Surabaya.  
-               Saya percaya bahwa teknologi bukan hanya alat, tapi juga seni yang dapat mengubah cara kita hidup.  
-               Di luar kuliah, saya gemar membangun aplikasi dan mempelajari teknologi terbaru.</p>
+    <button id="darkToggle" class="toggle" aria-label="Toggle dark mode">
+      <i class="bx bx-moon"></i>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="section hero observe">
+    <div class="hero__media">
+      <img src="img/1696839530280.png" alt="Foto profil Iqbal" class="avatar" />
+    </div>
+    <div class="hero__text">
+      <h1 class="title">Halo, saya <span>Moh Iqbal Triwijaya</span></h1>
+      <p class="lead">
+        Mahasiswa <strong>Teknik Informatika</strong> di <em>Politeknik Elektronika Negeri Surabaya</em>.
+        Saya menikmati proses mengubah ide menjadi produk digital yang bernilai—
+        fokus pada <strong>pengembangan aplikasi</strong>, <strong>UI/UX</strong>, dan <strong>pemrograman modern</strong>.
+        Buat saya, teknologi adalah kombinasi <em>logika</em> dan <em>rasa</em> yang membantu manusia bekerja lebih baik.
+      </p>
+      <div class="hero__cta">
+        <a href="#portfolio" class="btn btn--primary">Lihat Proyek</a>
+        <a href="#contact" class="btn btn--ghost">Hubungi Saya</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section observe">
+    <div class="container">
+      <h2 class="section__title">Tentang Saya</h2>
+      <div class="about">
+        <img src="img/me.JPG" alt="Iqbal sedang berpose" class="about__img" />
+        <div class="about__text">
+          <p>
+            Saya tumbuh di <strong>Sumenep</strong> dan menempuh pendidikan di <strong>SMAN 2 Sumenep</strong>. 
+            Tinggi 170 cm, berat 70 kg—yang terpenting: <strong>semangat belajar yang tidak cepat puas</strong>. 
+            Saya pernah meraih <strong>Juara 1 Olimpiade Nasional</strong> dan <strong>Juara 2 tingkat nasional</strong>.
+          </p>
+          <p>
+            Filosofi kerja saya sederhana: <em>suka dulu dengan prosesnya</em>, 
+            <em>hargai diri dan tim</em>, dan <em>terus iterasi kecil yang konsisten</em>. 
+            Saya percaya produk terbaik lahir dari <strong>kolaborasi yang sehat</strong> dan 
+            <strong>pengalaman pengguna yang dipikirkan matang</strong>.
+          </p>
+          <ul class="about__bullets">
+            <li><i class="bx bx-check"></i> Problem-solver dengan mindset produk</li>
+            <li><i class="bx bx-check"></i> Kode bersih, UI rapi, UX jelas</li>
+            <li><i class="bx bx-check"></i> Komit pada kualitas & detail</li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Tentang Saya</h2>
-            <div class="about-content">
-                <img src="me.JPG" alt="Foto Iqbal" class="about-img">
-                <p>Perjalanan saya dimulai di SMAN 2 Sumenep, di mana saya menemukan passion di dunia teknologi.  
-                   Tinggi 170 cm, berat 70 kg, dan tekad yang lebih berat lagi 😄.  
-                   Beberapa pencapaian saya antara lain juara 1 Olimpiade Nasional dan juara 2 tingkat nasional.  
-                   Bagi saya, keberhasilan dimulai dari menghargai diri sendiri dan terus berkembang setiap hari.</p>
-            </div>
+  <!-- Portfolio -->
+  <section id="portfolio" class="section observe">
+    <div class="container">
+      <h2 class="section__title">Portofolio</h2>
+      <!-- 5 items -> desktop: 3 di atas, 2 di bawah. tablet: 2-2-1. mobile: 1-1-1-1-1 (atau 2 kolom kecil) -->
+      <div class="grid-portfolio">
+        <figure class="card">
+          <img src="img/gambar4.jpeg" alt="Project 1" />
+          <figcaption>Project 1 — Sistem Reservasi</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="img/gambar5.jpeg" alt="Project 2" />
+          <figcaption>Project 2 — Dashboard Analytics</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="img/gambar3.jpeg" alt="Project 3" />
+          <figcaption>Project 3 — Landing Page Modern</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="img/gambar.jpeg" alt="Project 4" />
+          <figcaption>Project 4 — Aplikasi Mobile</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="img/gambar2.jpeg" alt="Project 5" />
+          <figcaption>Project 5 — Komponen UI Kit</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section observe">
+    <div class="container">
+      <h2 class="section__title">Skill</h2>
+      <div class="skills">
+        <div class="skill">
+          <div class="skill__top">
+            <span>HTML</span><span>90%</span>
+          </div>
+          <div class="skill__bar"><span style="--val:90%"></span></div>
         </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2>Portfolio</h2>
-            <div class="portfolio-grid">
-                <img src="gambar4.jpeg" alt="Project 1">
-                <img src="gambar5.jpeg" alt="Project 2">
-                <img src="gambar3.jpeg" alt="Project 3">
-                <img src="gambar.jpeg" alt="Project 4">
-                <img src="gambar2.jpeg" alt="Project 5">
-            </div>
+        <div class="skill">
+          <div class="skill__top">
+            <span>CSS</span><span>80%</span>
+          </div>
+          <div class="skill__bar"><span style="--val:80%"></span></div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Skills -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>Skill / Kemampuan</h2>
-            <div class="skill-bar">
-                <p>HTML</p>
-                <div class="bar"><span style="width: 90%;"></span></div>
-                <p>CSS</p>
-                <div class="bar"><span style="width: 80%;"></span></div>
-            </div>
+  <!-- Contact -->
+  <section id="contact" class="section observe">
+    <div class="container">
+      <h2 class="section__title">Kontak</h2>
+      <div class="contact">
+        <div class="contact__social">
+          <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+          <a href="#" aria-label="Facebook"><i class='bx bxl-facebook-circle'></i></a>
+          <a href="#" aria-label="Twitter / X"><i class='bx bxl-twitter'></i></a>
         </div>
-    </section>
+        <form class="contact__form" onsubmit="event.preventDefault(); alert('Terima kasih! Pesan kamu sudah terkirim.');">
+          <label>
+            <span>Nama</span>
+            <input type="text" placeholder="Nama lengkap" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" placeholder="email@contoh.com" required>
+          </label>
+          <label class="full">
+            <span>Pesan</span>
+            <textarea rows="5" placeholder="Tulis pesanmu di sini..." required></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary full">Kirim</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Kontak</h2>
-            <div class="contact-grid">
-                <div class="social">
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-                </div>
-                <form>
-                    <input type="text" placeholder="Nama">
-                    <input type="email" placeholder="Email">
-                    <textarea placeholder="Pesan"></textarea>
-                    <button type="submit">Kirim</button>
-                </form>
-            </div>
-        </div>
-    </section>
+  <footer class="footer">
+    <p>© 2025 Moh Iqbal Triwijaya — All rights reserved.</p>
+  </footer>
 
-    <footer>
-        <p>&copy; 2025 Iqbal. Semua hak dilindungi.</p>
-    </footer>
+  <!-- Scripts -->
+  <script>
+    // Dark mode toggle + remember preference
+    const body = document.body;
+    const toggle = document.getElementById('darkToggle');
+    const metaTheme = document.getElementById('meta-theme-color');
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    <script>
-        const toggle = document.getElementById('darkToggle');
-        toggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
+    function applyTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.add('dark');
+        toggle.innerHTML = "<i class='bx bx-sun'></i>";
+        metaTheme.setAttribute('content', '#121212');
+      } else {
+        body.classList.remove('dark');
+        toggle.innerHTML = "<i class='bx bx-moon'></i>";
+        metaTheme.setAttribute('content', '#0B5ED7');
+      }
+    }
+    applyTheme(saved || (prefersDark ? 'dark' : 'light'));
+
+    toggle.addEventListener('click', () => {
+      const mode = body.classList.contains('dark') ? 'light' : 'dark';
+      localStorage.setItem('theme', mode);
+      applyTheme(mode);
+    });
+
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav__toggle');
+    const navLinks = document.querySelector('.nav__links');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      navLinks.classList.toggle('is-open');
+    });
+    navLinks.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      })
+    );
+
+    // IntersectionObserver: fade-in + slide-up + skill bar animate
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('in');
+        // trigger skill bars
+        if (entry.target.id === 'skills') {
+          document.querySelectorAll('.skill__bar span').forEach(el => {
+            el.style.setProperty('--run', '1');
+          });
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.observe').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
