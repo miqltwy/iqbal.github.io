@@ -1,252 +1,209 @@
+/* Reset */
 * {
-    text-decoration: none;
-    margin:0px;
-    padding:0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Body */
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color:#94A684;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #f4f6f7;
+    color: #333;
 }
 
-.linked{
-    width: 100%;
+/* Navbar */
+.navbar {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    line-height: 80px;
+    background: white;
+    padding: 15px 80px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     position: sticky;
-    position: -webkit-sticky; 
     top: 0;
-    background: #FFFFFF;
-    z-index: 80;
-    border-bottom:1px solid #364f6b;
+    z-index: 100;
 }
 
 .logo a {
-    font-size: 50px;
-    font-weight:800;
-    font-family: courier;
-    color:#213555;
-    margin-left: 120px;
-}
-.menu a{
-    font-size: 18px;
-    margin-right: 10px;
-    text-decoration: none;
-    color: black;
-    text-align: end;
-}
-
-
-
-.menu ul {
-    display: flex;
-    justify-content: center;
-    margin-right: 12px;
-    gap: 17px;
-    list-style-type: none;
-    overflow: hidden;
-}
-
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-section {
-    margin: auto;
-    display: flex;
-    margin-bottom: 50px;
-}
-
-
-.kolom {
-    margin-top: 50px;
-    margin-bottom: 50px;
-
-}
-
-.deskripsi{
-padding-left: 34px;
-padding-top: 290px;
-font-family: 'comic sans ms';
-color: #F1EFEF;
-font-size: 16px;
-}
-
-.para p{
-    display: flex;
-    margin-bottom: 40px;
-
-}
-
-.kolom .deskripsi {
-    font-size: 20px;
+    font-size: 28px;
     font-weight: bold;
-    font-family: 'comic sans ms';
-    color: #364f6b;
+    color: #213555;
+    text-decoration: none;
 }
 
-.p {
-    
-    transition:transform 0.3s;
-    padding-left: 80px;
-    padding-top:170px;
-}
-
-.pp {
-    padding-left: 500px;
-    padding: 140px; 
-}
-
-#skilled{
+.nav-links {
+    list-style: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 25px;
-    box-shadow: 0 0 34px cyan;
-    width: 800px;
-    border-radius: 10px;
+    gap: 20px;
 }
-#portolio{
-    gap: 192px;
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
 }
-.skill h1{
+
+.nav-links li a:hover {
+    color: #004fc5;
+}
+
+/* Section Titles */
+.section-title {
     text-align: center;
     font-size: 28px;
-    color: #000000;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    color: #213555;
 }
 
-.skl h3{
-    margin-top: 20px;
-    padding: 13px;
+/* Home */
+.home {
+    display: flex;
+    align-items: center;
+    padding: 60px 80px;
+    gap: 40px;
 }
 
-.bar .html{
-    display: block;
-    width: 380px;
-    height: 25px;
-    border-radius:30px;
-    box-shadow: 0 0px 10px #f2f2f2;
-}
-.html{
-    background: linear-gradient(90deg, #004fc5 70%, #f2f2f2 30%);
+.profile-img {
+    width: 300px;
+    border-radius: 50%;
 }
 
-.bar .css{
-    display: block;
-    width: 380px;
-    height: 25px;
-    border-radius:30px;
-    box-shadow: 0 0 10px #f2f2f2;
-    margin-bottom: 15px;
-}
-.css{
-    background: linear-gradient(90deg, #004fc5 65%, #f2f2f2 35%);
+.home-text {
+    max-width: 600px;
+    font-size: 16px;
+    color: #444;
 }
 
-.bar .html:hover{
-    transform: scale(1.1);
-}
-.bar .css:hover{
-    transform: scale(1.1);
+/* About */
+.about {
+    padding: 60px 80px;
 }
 
-
-
-
-
-
-
-.container {
-    text-align: center;
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
-.title {
-    margin-bottom: 20px;
-
+.about-img {
+    width: 350px;
+    border-radius: 10px;
 }
 
-.titlee {
-    margin-bottom: px;
+/* Portfolio */
+.portfolio {
+    padding: 60px 80px;
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
 }
 
-.gallery-item {
-    flex-basis: calc(33.33% - 20px);
-    position: relative;
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
-.gallery-item img {
-    max-width: 100%;
-    height: auto;
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Skills */
+.skills {
+    padding: 60px 80px;
+}
+
+.skill-bar {
+    margin-bottom: 20px;
+}
+
+.bar {
+    background: #ddd;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.bar span {
     display: block;
-    max-height: 1200px;
+    height: 100%;
 }
 
-.gallery-item:nth-child(3n + 1) {
-    clear: both;
+.html {
+    width: 90%;
+    background: linear-gradient(90deg, #004fc5, #87cefa);
 }
 
-#contact{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.css {
+    width: 80%;
+    background: linear-gradient(90deg, #004fc5, #87cefa);
 }
 
-.waduh{
-    text-align: center;
-    padding-top: 55px;
-    padding-bottom: 30px;
-}
-.sosmeed a{
-    font-size: 50px;
-    display: flex;
-    flex-direction: column;
-    margin: 5px 8px 5px 0;
-    color: #000000;
+/* Contact */
+.contact {
+    padding: 60px 80px;
+    background: #f0f8ff;
 }
 
-.sosmeed a:hover{
-    transform: scale(1.1);
-}
-.kontak{
+.contact-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 6px;
+    gap: 20px;
 }
-.kontak input, textarea{
-    width: 250px;
+
+.socials {
+    display: flex;
+    gap: 15px;
+    font-size: 32px;
+}
+
+.socials a {
+    color: #333;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: #004fc5;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #004fc5;
+    color: white;
+    padding: 10px;
     border: none;
-    border-radius: 2px;
-    margin-left: 5px    ;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.foot{
-    background-color: #004fc5;
-    width:100%;
-    height: 120px;
+.contact-form button:hover {
+    background: #003a99;
 }
 
-.kk {
-padding-left: 99px;
-}
-
-.kk  ul, li{
-    list-style: none;
-
+/* Footer */
+footer {
+    background: #004fc5;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
 }
