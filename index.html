@@ -21,7 +21,7 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="home">
+    <section id="home" class="home fade-in">
         <img src="img/1696839530280.png" alt="Profile" class="profile-img">
         <div class="home-text">
             <p>"Halo, nama saya Moh Iqbal Triwijaya. Saya tinggal di Sumenep dan saat ini sedang mengejar gelar di Politeknik Elektronika Negeri Surabaya dengan jurusan Teknik Informatika. Di luar kuliah, saya memiliki minat yang kuat dalam pengembangan aplikasi dan pemrograman."</p>
@@ -29,7 +29,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about fade-in">
         <h1 class="section-title">Tentang Saya</h1>
         <div class="about-content">
             <img src="img/me.JPG" alt="About Me" class="about-img">
@@ -38,7 +38,7 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio fade-in">
         <h1 class="section-title">Portfolio</h1>
         <div class="gallery">
             <img src="img/gambar4.jpeg" alt="Gambar 1">
@@ -50,7 +50,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <section id="skills" class="skills fade-in">
         <h1 class="section-title">Skill / Kemampuan</h1>
         <div class="skill-bar">
             <p>HTML</p>
@@ -63,7 +63,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact fade-in">
         <h1 class="section-title">Kontak</h1>
         <div class="contact-container">
             <div class="socials">
@@ -72,9 +72,9 @@
                 <a href="#"><i class='bx bxl-twitter'></i></a>
             </div>
             <form class="contact-form">
-                <input type="text" placeholder="Nama">
-                <input type="email" placeholder="Email">
-                <textarea placeholder="Pesan"></textarea>
+                <input type="text" placeholder="Nama" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Pesan" required></textarea>
                 <button type="submit">Kirim</button>
             </form>
         </div>
@@ -84,5 +84,33 @@
     <footer>
         <p>© 2025 Moh Iqbal Triwijaya | All Rights Reserved</p>
     </footer>
+
+    <script>
+        // Animation on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const options = { threshold: 0.3 };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            });
+        }, options);
+
+        faders.forEach(fader => appearOnScroll.observe(fader));
+
+        // Skill bar animation
+        window.addEventListener('scroll', () => {
+            const skills = document.querySelector('.skills');
+            const skillBars = document.querySelectorAll('.bar span');
+            const skillsTop = skills.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (skillsTop < windowHeight - 50) {
+                skillBars.forEach(bar => bar.classList.add('fill'));
+            }
+        });
+    </script>
 </body>
 </html>
